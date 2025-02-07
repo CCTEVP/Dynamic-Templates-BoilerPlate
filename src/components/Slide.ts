@@ -1,9 +1,5 @@
 import { log } from "../utils/Functions";
-import {
-    SlideParameters,
-    SlideVideoParameters,
-    SlideOverlayParameters,
-} from "../utils/Interfaces";
+import { SlideParameters } from "../utils/Interfaces";
 
 export default class Slide {
     private identifier = "";
