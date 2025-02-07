@@ -11,7 +11,7 @@ export default class Logger {
         if (this.attributes.length > 0) {
             this.attributes.forEach((attribute: string) => {
                 this.logger.classList.add(attribute);
-            })
+            });
         }
         const performance = document.createElement("div");
         performance.id = "performance";
@@ -32,39 +32,6 @@ export default class Logger {
         return this.logger;
     }
     show() {
-        this.logger.classList.remove("hidden")
+        this.logger.classList.remove("hidden");
     }
-    /*
-    public record(msg: string = "", showInPlayer = false, target = "") {
-        if (showInPlayer) {
-            if (target != "") {
-                console.log("Performance")
-                const parameters: HTMLDivElement | null = this.logger.querySelector("#performance");
-                const targetList = parameters?.querySelector("ul");
-                let targetItem = targetList?.querySelector(" #" + target);
-                if (!targetItem) {
-                    targetItem = document.createElement("li");
-                    targetItem.setAttribute("id", target);
-                    targetItem.innerHTML = msg;
-                    targetList?.appendChild(targetItem);
-                } else {
-                    targetItem.innerHTML = msg;
-                }
-            } else {
-                console.log("Response")
-                const responses = this.logger.querySelector("#responses");
-                const targetList = responses?.querySelector("ul");
-                if (targetList) {
-                    if (targetList?.innerHTML != "") {
-                        targetList.innerHTML = targetList.innerHTML + "<li>" + msg + "</li>";
-                    } else {
-                        targetList.innerHTML = "<li>" + msg + "</li>";
-                    }
-                }
-            }
-        } else {
-            //console.log(msg);
-        }
-    }
-    */
 }
